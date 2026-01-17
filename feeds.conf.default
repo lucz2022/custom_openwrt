@@ -1,13 +1,12 @@
-# LEDE 项目默认的软件包源配置
+src-git packages https://github.com/coolsnowwolf/packages
+src-git luci https://github.com/coolsnowwolf/luci.git;openwrt-23.05
+src-git routing https://github.com/coolsnowwolf/routing
+src-git telephony https://github.com/coolsnowwolf/telephony.git
 
-src-git packages https://github.com/lede-project/source.git;packages
-src-git luci https://github.com/lede-project/source.git;luci
-src-git routing https://github.com/lede-project/source.git;routing
-src-git telephony https://github.com/lede-project/source.git;telephony
+# 官方核心 feeds
+src-git packages_official https://git.openwrt.org/feed/packages.git;openwrt-23.05
+src-git targets https://git.openwrt.org/feed/targets.git;openwrt-23.05
+src-git oldpackages https://git.openwrt.org/packages.git;openwrt-23.05
 
-# 可选旧包仓库
-# src-git oldpackages https://github.com/lede-project/source.git;oldpackages
-
-# 自定义本地包
-src-link custom /usr/src/lede/custom-feed
-
+# 本地自定义feed（如果有）
+src-link custom /usr/src/openwrt/custom-feed
